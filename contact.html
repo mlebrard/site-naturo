@@ -142,23 +142,15 @@
           </div>
         </div>
 
-        <!-- PRISE DE RDV -->
+        <!-- PRISE DE RDV Cal.com -->
         <div class="rdv-bloc">
           <h2>Prendre rendez-vous</h2>
-          <p>Réservez directement votre créneau en ligne, ou appelez-moi si vous préférez.</p>
+          <p>Choisissez votre type de consultation et réservez directement votre créneau.</p>
 
-          <!-- Espace Cal.com — à intégrer avec votre lien de réservation -->
-          <div style="background: var(--beige-fond); border-radius: var(--rayon); padding: 2rem; text-align: center; margin-bottom: 1.5rem;">
-            <p style="font-size: 1rem; color: var(--vert-fonce); margin-bottom: 1.25rem;">Réservation en ligne</p>
-            <!-- Remplacer l'URL ci-dessous par votre lien Cal.com personnel -->
-            <a href="https://cal.com" target="_blank" rel="noopener" class="btn btn-primaire" style="width: 100%; justify-content: center;">
-              Réserver mon créneau →
-            </a>
-            <p style="font-size: 0.8rem; color: var(--texte-secondaire); margin-top: 1rem;">Vous recevrez une confirmation par email</p>
-          </div>
+          <!-- Cal.com inline embed -->
+          <div id="cal-inline" style="min-height: 500px; border-radius: var(--rayon); overflow: hidden;"></div>
 
-          <div style="text-align: center; color: var(--texte-secondaire); font-size: 0.9rem; margin-bottom: 1rem;">— ou —</div>
-
+          <div style="text-align: center; color: var(--texte-secondaire); font-size: 0.9rem; margin: 1.25rem 0 0.75rem;">— ou par téléphone —</div>
           <div class="contact-ligne" style="justify-content: center; margin-bottom: 0;">
             <span class="contact-ligne-icone">📞</span>
             <span><a href="tel:+33681601035" style="font-size: 1.1rem;">06 81 60 10 35</a></span>
@@ -215,5 +207,44 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- Cal.com embed -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar); p(cal, ["-", namespace, ar]);
+          } else { p(cal, ar); }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#cal-inline",
+      calLink: "mlebrard",
+      layout: "month_view"
+    });
+    Cal("ui", {
+      styles: { branding: { brandColor: "#7A9E7E" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  </script>
 </body>
 </html>
