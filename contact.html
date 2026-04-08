@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Prendre rendez-vous — Marie-Laure Ebrard, naturopathe à Cestas (33)</title>
+  <meta name="description" content="Prendre rendez-vous avec Marie-Laure Ebrard, naturopathe à Cestas (33). Consultation en cabinet ou en visio. Téléphone : 06 81 60 10 35.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-infos { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-bloc h3 { margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .contact-ligne {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .contact-ligne-icone { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .contact-ligne a { color: var(--vert-fonce); font-weight: 600; transition: color 0.15s; }
+    .contact-ligne a:hover { color: var(--accent); }
+    .rdv-bloc {
+      background: var(--blanc-casse);
+      border: 1px solid var(--bordure);
+      border-radius: var(--rayon);
+      padding: 2rem;
+      box-shadow: var(--ombre);
+    }
+    .rdv-bloc h2 { margin-bottom: 0.5rem; }
+    .rdv-bloc p { color: var(--texte-secondaire); margin-bottom: 1.5rem; }
+    .horaires-liste { display: flex; flex-direction: column; gap: 0.4rem; }
+    .horaire-ligne {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--bordure);
+    }
+    .horaire-ligne:last-child { border-bottom: none; }
+    .horaire-jour { color: var(--texte-secondaire); }
+    .horaire-heure { font-weight: 600; color: var(--vert-fonce); }
+    @media (max-width: 700px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-nom">Marie-Laure Ebrard</span>
+        <span class="logo-titre">Naturopathe · Cestas (33)</span>
+      </a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="menopause.html">Périménopause</a>
+        <a href="naturopathie.html">La naturopathie</a>
+        <a href="consultations.html">Consultations</a>
+        <a href="allaitement.html">Allaitement</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html" class="nav-rdv">Prendre RDV</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-contenu">
+      <h1>Contact &amp; Rendez-vous</h1>
+      <p class="lead">Prenez rendez-vous en ligne ou contactez-moi directement par téléphone ou email.</p>
+    </div>
+  </div>
+
+  <section class="bg-blanc">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFOS CONTACT -->
+        <div class="contact-infos">
+          <div class="contact-bloc">
+            <h3>Me contacter</h3>
+            <div class="contact-ligne">
+              <span class="contact-ligne-icone">📞</span>
+              <span><a href="tel:+33681601035">06 81 60 10 35</a></span>
+            </div>
+            <div class="contact-ligne">
+              <span class="contact-ligne-icone">✉</span>
+              <span><a href="mailto:mlebrard@sbe33.fr">mlebrard@sbe33.fr</a></span>
+            </div>
+          </div>
+
+          <div class="contact-bloc">
+            <h3>Le cabinet à Cestas</h3>
+            <div class="contact-ligne">
+              <span class="contact-ligne-icone">📍</span>
+              <div>
+                4 allée des Chardonnerets<br>
+                33610 Cestas<br>
+                <a href="https://maps.google.com/?q=4+allée+des+Chardonnerets+33610+Cestas" target="_blank" rel="noopener" style="font-size: 0.875rem; color: var(--vert-sauge);">Voir l'itinéraire →</a>
+              </div>
+            </div>
+            <p style="font-size: 0.875rem; color: var(--texte-secondaire); margin-top: 0.5rem;">À proximité de Villenave d'Ornon, Gradignan, Canéjan, Talence et Bordeaux.</p>
+          </div>
+
+          <div class="contact-bloc">
+            <h3>Horaires</h3>
+            <div class="horaires-liste">
+              <div class="horaire-ligne">
+                <span class="horaire-jour">Lundi</span>
+                <span class="horaire-heure">Sur rendez-vous</span>
+              </div>
+              <div class="horaire-ligne">
+                <span class="horaire-jour">Mardi – Jeudi</span>
+                <span class="horaire-heure">Sur rendez-vous</span>
+              </div>
+              <div class="horaire-ligne">
+                <span class="horaire-jour">Vendredi</span>
+                <span class="horaire-heure">Sur rendez-vous</span>
+              </div>
+              <div class="horaire-ligne">
+                <span class="horaire-jour">Samedi – Dimanche</span>
+                <span class="horaire-heure" style="color: var(--texte-secondaire); font-weight: 400;">Fermé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-bloc">
+            <h3>Consultations en visio</h3>
+            <p style="font-size: 0.9rem; color: var(--texte-secondaire);">Je propose des consultations en visioconférence pour les personnes qui ne peuvent pas se déplacer à Cestas. Elles se déroulent dans les mêmes conditions que les consultations en cabinet, depuis chez vous, partout en France.</p>
+          </div>
+        </div>
+
+        <!-- PRISE DE RDV -->
+        <div class="rdv-bloc">
+          <h2>Prendre rendez-vous</h2>
+          <p>Réservez directement votre créneau en ligne, ou appelez-moi si vous préférez.</p>
+
+          <!-- Espace Cal.com — à intégrer avec votre lien de réservation -->
+          <div style="background: var(--beige-fond); border-radius: var(--rayon); padding: 2rem; text-align: center; margin-bottom: 1.5rem;">
+            <p style="font-size: 1rem; color: var(--vert-fonce); margin-bottom: 1.25rem;">Réservation en ligne</p>
+            <!-- Remplacer l'URL ci-dessous par votre lien Cal.com personnel -->
+            <a href="https://cal.com" target="_blank" rel="noopener" class="btn btn-primaire" style="width: 100%; justify-content: center;">
+              Réserver mon créneau →
+            </a>
+            <p style="font-size: 0.8rem; color: var(--texte-secondaire); margin-top: 1rem;">Vous recevrez une confirmation par email</p>
+          </div>
+
+          <div style="text-align: center; color: var(--texte-secondaire); font-size: 0.9rem; margin-bottom: 1rem;">— ou —</div>
+
+          <div class="contact-ligne" style="justify-content: center; margin-bottom: 0;">
+            <span class="contact-ligne-icone">📞</span>
+            <span><a href="tel:+33681601035" style="font-size: 1.1rem;">06 81 60 10 35</a></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CARTE GOOGLE MAPS -->
+      <div style="margin-top: 3rem; border-radius: var(--rayon); overflow: hidden; height: 300px; border: 1px solid var(--bordure);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.8!2d-0.664!3d44.779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDQ2JzQ0LjQiTiAwwrAzOSc1MC40Ilc!5e0!3m2!1sfr!2sfr!4v1"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          title="Cabinet Marie-Laure Ebrard Naturopathe Cestas">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-nom">Marie-Laure Ebrard</div>
+        <p class="footer-desc">Naturopathe diplômée Euronature/FENA (1200h). Cabinet à Cestas (33) · Visio France entière.</p>
+        <div class="footer-contact">
+          <a href="tel:+33681601035">📞 06 81 60 10 35</a>
+          <a href="mailto:mlebrard@sbe33.fr">✉ mlebrard@sbe33.fr</a>
+          <a href="https://maps.google.com/?q=4+allée+des+Chardonnerets+33610+Cestas" target="_blank" rel="noopener">📍 4 allée des Chardonnerets, 33610 Cestas</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-titre">Navigation</div>
+        <ul class="footer-liens">
+          <li><a href="menopause.html">Périménopause &amp; Ménopause</a></li>
+          <li><a href="naturopathie.html">La naturopathie</a></li>
+          <li><a href="consultations.html">Consultations &amp; Tarifs</a></li>
+          <li><a href="allaitement.html">Ateliers allaitement</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact &amp; RDV</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titre">Infos pratiques</div>
+        <ul class="footer-liens">
+          <li><a href="consultations.html">Tarifs</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© 2026 Marie-Laure Ebrard · Naturopathe à Cestas (33)</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

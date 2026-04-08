@@ -1,0 +1,551 @@
+/* ================================================
+   MARIE-LAURE EBRARD — NATUROPATHE
+   Design system global
+   ================================================ */
+
+/* ---- Variables ---- */
+:root {
+  --vert-sauge:     #7A9E7E;
+  --vert-fonce:     #3D5A40;
+  --beige-fond:     #F5F0EB;
+  --blanc-casse:    #FEFCF8;
+  --texte-principal:#2C2C2C;
+  --texte-secondaire:#6B6B6B;
+  --accent:         #C4956A;
+  --accent-hover:   #b07e55;
+  --bordure:        #E0D8D0;
+
+  --font-titre: 'Playfair Display', Georgia, serif;
+  --font-corps:  'Source Sans 3', system-ui, sans-serif;
+
+  --rayon: 4px;
+  --ombre: 0 4px 24px rgba(61,90,64,0.08);
+  --ombre-forte: 0 8px 40px rgba(61,90,64,0.14);
+
+  --max-largeur: 1100px;
+  --padding-section: 5rem 1.5rem;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ---- Base ---- */
+body {
+  background-color: var(--beige-fond);
+  color: var(--texte-principal);
+  font-family: var(--font-corps);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---- Typographie ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-titre);
+  line-height: 1.25;
+  color: var(--vert-fonce);
+}
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+h4 { font-size: 1.1rem; }
+
+p { margin-bottom: 1rem; color: var(--texte-principal); }
+p:last-child { margin-bottom: 0; }
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--texte-secondaire);
+  line-height: 1.8;
+}
+
+/* ---- Layout ---- */
+.container {
+  max-width: var(--max-largeur);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section { padding: var(--padding-section); }
+
+.section-titre {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-titre h2 { margin-bottom: 0.75rem; }
+.section-titre p { color: var(--texte-secondaire); max-width: 560px; margin: 0 auto; }
+
+.divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+.divider-left { margin-left: 0; }
+
+/* ---- Boutons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--rayon);
+  font-family: var(--font-corps);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primaire {
+  background-color: var(--accent);
+  color: var(--blanc-casse);
+  border-color: var(--accent);
+}
+.btn-primaire:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+.btn-secondaire {
+  background-color: transparent;
+  color: var(--vert-fonce);
+  border-color: var(--vert-sauge);
+}
+.btn-secondaire:hover {
+  background-color: var(--vert-sauge);
+  color: var(--blanc-casse);
+}
+.btn-blanc {
+  background-color: var(--blanc-casse);
+  color: var(--vert-fonce);
+  border-color: var(--blanc-casse);
+}
+.btn-blanc:hover {
+  background-color: transparent;
+  color: var(--blanc-casse);
+  border-color: var(--blanc-casse);
+}
+
+/* ---- Header / Nav ---- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background-color: var(--blanc-casse);
+  border-bottom: 1px solid var(--bordure);
+  transition: box-shadow 0.2s;
+}
+.site-header.scrolled { box-shadow: var(--ombre); }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  max-width: var(--max-largeur);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo-nom {
+  font-family: var(--font-titre);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vert-fonce);
+}
+.logo-titre {
+  font-size: 0.75rem;
+  color: var(--texte-secondaire);
+  letter-spacing: 0.05em;
+}
+
+.nav-principale { display: flex; align-items: center; gap: 0.25rem; }
+.nav-principale a {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texte-principal);
+  border-radius: var(--rayon);
+  transition: color 0.15s, background-color 0.15s;
+}
+.nav-principale a:hover,
+.nav-principale a.active { color: var(--vert-fonce); background-color: rgba(122,158,126,0.1); }
+.nav-principale a.nav-rdv {
+  background-color: var(--accent);
+  color: var(--blanc-casse);
+  margin-left: 0.5rem;
+}
+.nav-principale a.nav-rdv:hover { background-color: var(--accent-hover); }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--vert-fonce);
+  transition: transform 0.25s, opacity 0.25s;
+}
+.menu-toggle.ouvert span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.ouvert span:nth-child(2) { opacity: 0; }
+.menu-toggle.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  overflow: hidden;
+  background-color: var(--vert-fonce);
+}
+.hero-image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+.hero-contenu {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-largeur);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  color: var(--blanc-casse);
+}
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(196,149,106,0.85);
+  color: var(--blanc-casse);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.hero-contenu h1 {
+  color: var(--blanc-casse);
+  margin-bottom: 1.25rem;
+  max-width: 680px;
+}
+.hero-contenu .lead {
+  color: rgba(254,252,248,0.85);
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+.hero-localisation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(254,252,248,0.7);
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+.hero-localisation::before { content: '📍'; font-size: 1rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* ---- Section alternée fond ---- */
+.bg-blanc { background-color: var(--blanc-casse); }
+.bg-beige { background-color: var(--beige-fond); }
+.bg-vert  { background-color: var(--vert-fonce); color: var(--blanc-casse); }
+.bg-vert h2, .bg-vert h3, .bg-vert p { color: var(--blanc-casse); }
+
+/* ---- Cartes spécialisations ---- */
+.cartes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.carte {
+  background: var(--blanc-casse);
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.carte:hover { box-shadow: var(--ombre-forte); transform: translateY(-3px); }
+.carte-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.carte-corps {
+  padding: 1.75rem;
+}
+.carte-badge {
+  display: inline-block;
+  background-color: rgba(122,158,126,0.15);
+  color: var(--vert-fonce);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.carte-corps h3 { margin-bottom: 0.75rem; }
+.carte-corps p { color: var(--texte-secondaire); margin-bottom: 1.25rem; }
+
+/* ---- Section approche (icônes) ---- */
+.approche-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+.approche-item { padding: 1.5rem 1rem; }
+.approche-icone {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.approche-item h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.approche-item p { font-size: 0.925rem; color: var(--texte-secondaire); }
+
+/* ---- Section ML portrait ---- */
+.portrait-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.portrait-image-wrap { position: relative; }
+.portrait-image {
+  width: 100%;
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre-forte);
+  object-fit: cover;
+  max-height: 520px;
+}
+.portrait-accent {
+  position: absolute;
+  top: -1rem; left: -1rem;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  opacity: 0.15;
+  z-index: -1;
+}
+.portrait-texte blockquote {
+  font-family: var(--font-titre);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--vert-fonce);
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+.formations-liste {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.formations-liste li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--texte-secondaire);
+}
+.formations-liste li::before {
+  content: '✓';
+  color: var(--vert-sauge);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ---- Bandeau CTA ---- */
+.bandeau-rdv {
+  background-color: var(--vert-fonce);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.bandeau-rdv h2, .bandeau-rdv p { color: var(--blanc-casse); }
+.bandeau-rdv h2 { margin-bottom: 0.75rem; }
+.bandeau-rdv p { color: rgba(254,252,248,0.8); margin-bottom: 2rem; }
+.bandeau-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+/* ---- Page hero (pages internes) ---- */
+.page-hero {
+  margin-top: 70px;
+  padding: 5rem 1.5rem 4rem;
+  background-color: var(--vert-fonce);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/phytotherapie.jpg') center/cover no-repeat;
+  opacity: 0.15;
+}
+.page-hero-contenu { position: relative; z-index: 1; }
+.page-hero h1 { color: var(--blanc-casse); margin-bottom: 0.75rem; }
+.page-hero .lead { color: rgba(254,252,248,0.8); max-width: 560px; margin: 0 auto; }
+
+/* ---- Tarifs ---- */
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.tarif-carte {
+  background: var(--blanc-casse);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.75rem;
+  position: relative;
+}
+.tarif-carte.mise-en-avant {
+  border-color: var(--vert-sauge);
+  border-width: 2px;
+}
+.tarif-badge {
+  display: inline-block;
+  background-color: var(--vert-sauge);
+  color: var(--blanc-casse);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.tarif-carte h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.tarif-duree { font-size: 0.85rem; color: var(--texte-secondaire); margin-bottom: 1rem; }
+.tarif-prix { font-size: 2rem; font-weight: 700; color: var(--vert-fonce); font-family: var(--font-titre); }
+.tarif-prix span { font-size: 1rem; color: var(--texte-secondaire); font-family: var(--font-corps); font-weight: 400; }
+.tarif-description { font-size: 0.875rem; color: var(--texte-secondaire); margin-top: 0.75rem; }
+
+/* ---- Note déonto ---- */
+.note-deonto {
+  background-color: rgba(122,158,126,0.1);
+  border-left: 3px solid var(--vert-sauge);
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--vert-fonce);
+  margin: 2rem 0;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background-color: var(--vert-fonce);
+  color: rgba(254,252,248,0.8);
+  padding: 3.5rem 1.5rem 2rem;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  max-width: var(--max-largeur);
+  margin: 0 auto 2.5rem;
+}
+.footer-logo-nom {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  color: var(--blanc-casse);
+  margin-bottom: 0.5rem;
+}
+.footer-desc { font-size: 0.875rem; margin-bottom: 1.25rem; line-height: 1.6; }
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(254,252,248,0.8);
+  margin-bottom: 0.5rem;
+  transition: color 0.15s;
+}
+.footer-contact a:hover { color: var(--blanc-casse); }
+.footer-titre {
+  font-family: var(--font-corps);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vert-sauge);
+  margin-bottom: 1rem;
+}
+.footer-liens { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-liens a {
+  font-size: 0.875rem;
+  color: rgba(254,252,248,0.75);
+  transition: color 0.15s;
+}
+.footer-liens a:hover { color: var(--blanc-casse); }
+.footer-bas {
+  max-width: var(--max-largeur);
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(254,252,248,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: rgba(254,252,248,0.5);
+}
+.footer-bas a { color: rgba(254,252,248,0.6); transition: color 0.15s; }
+.footer-bas a:hover { color: var(--blanc-casse); }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .portrait-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .portrait-image-wrap { max-width: 420px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  :root { --padding-section: 3.5rem 1.25rem; }
+  .nav-principale {
+    display: none;
+    position: fixed;
+    top: 70px; left: 0; right: 0;
+    background: var(--blanc-casse);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--bordure);
+    box-shadow: var(--ombre);
+    gap: 0.25rem;
+  }
+  .nav-principale.ouverte { display: flex; }
+  .nav-principale a { padding: 0.75rem 1rem; font-size: 1rem; }
+  .nav-principale a.nav-rdv { text-align: center; margin-left: 0; margin-top: 0.5rem; }
+  .menu-toggle { display: flex; }
+  .hero { min-height: 85vh; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bas { flex-direction: column; text-align: center; }
+  .tarifs-grid { grid-template-columns: 1fr; }
+}

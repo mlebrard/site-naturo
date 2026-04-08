@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Naturopathie, périménopause &amp; ménopause — Marie-Laure Ebrard</title>
+  <meta name="description" content="Articles de naturopathie sur la périménopause, la ménopause, l'alimentation, le sommeil et le bien-être hormonal. Par Marie-Laure Ebrard, naturopathe à Cestas (33).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .article-carte {
+      background: var(--blanc-casse);
+      border-radius: var(--rayon);
+      overflow: hidden;
+      box-shadow: var(--ombre);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-carte:hover { box-shadow: var(--ombre-forte); transform: translateY(-3px); }
+    .article-carte-image {
+      width: 100%; height: 200px;
+      object-fit: cover;
+      background-color: var(--beige-fond);
+    }
+    .article-carte-corps {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .article-tag {
+      background: rgba(122,158,126,0.15);
+      color: var(--vert-fonce);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+    }
+    .article-carte h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .article-carte h3 a { color: var(--vert-fonce); transition: color 0.15s; }
+    .article-carte h3 a:hover { color: var(--accent); }
+    .article-date { font-size: 0.8rem; color: var(--texte-secondaire); margin-bottom: 0.75rem; }
+    .article-resume { font-size: 0.9rem; color: var(--texte-secondaire); flex: 1; margin-bottom: 1.25rem; }
+    .article-carte .btn { align-self: flex-start; }
+    #blog-vide { text-align: center; padding: 3rem; color: var(--texte-secondaire); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-nom">Marie-Laure Ebrard</span>
+        <span class="logo-titre">Naturopathe · Cestas (33)</span>
+      </a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../menopause.html">Périménopause</a>
+        <a href="../naturopathie.html">La naturopathie</a>
+        <a href="../consultations.html">Consultations</a>
+        <a href="../allaitement.html">Allaitement</a>
+        <a href="index.html">Blog</a>
+        <a href="../contact.html" class="nav-rdv">Prendre RDV</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-contenu">
+      <h1>Le blog</h1>
+      <p class="lead">Conseils pratiques, éclairages sur la périménopause et la ménopause, naturopathie au quotidien.</p>
+    </div>
+  </div>
+
+  <section class="bg-blanc">
+    <div class="container">
+      <div id="articles-liste" class="blog-grid">
+        <div id="blog-vide">Chargement des articles…</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bandeau-rdv">
+    <div class="container" style="text-align: center;">
+      <h2>Une question après la lecture ?</h2>
+      <p>N'hésitez pas à me contacter. Chaque situation est unique.</p>
+      <div class="bandeau-actions">
+        <a href="../contact.html" class="btn btn-primaire">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-nom">Marie-Laure Ebrard</div>
+        <p class="footer-desc">Naturopathe diplômée Euronature/FENA (1200h). Cabinet à Cestas (33) · Visio France entière.</p>
+        <div class="footer-contact">
+          <a href="tel:+33681601035">📞 06 81 60 10 35</a>
+          <a href="mailto:mlebrard@sbe33.fr">✉ mlebrard@sbe33.fr</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-titre">Navigation</div>
+        <ul class="footer-liens">
+          <li><a href="../menopause.html">Périménopause &amp; Ménopause</a></li>
+          <li><a href="../naturopathie.html">La naturopathie</a></li>
+          <li><a href="../consultations.html">Consultations &amp; Tarifs</a></li>
+          <li><a href="../allaitement.html">Ateliers allaitement</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../contact.html">Contact &amp; RDV</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titre">Infos pratiques</div>
+        <ul class="footer-liens">
+          <li><a href="../consultations.html">Tarifs</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© 2026 Marie-Laure Ebrard · Naturopathe à Cestas (33)</span>
+      <a href="../mentions-legales.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Chargement dynamique des articles depuis articles.json
+    fetch('articles.json')
+      .then(r => r.json())
+      .then(articles => {
+        const liste = document.getElementById('articles-liste');
+        if (!articles.length) {
+          liste.innerHTML = '<div id="blog-vide">Les premiers articles arrivent bientôt…</div>';
+          return;
+        }
+        // Trier du plus récent au plus ancien
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        liste.innerHTML = articles.map(a => `
+          <article class="article-carte">
+            ${a.image ? `<img src="../${a.image}" alt="${a.title}" class="article-carte-image" loading="lazy">` : '<div class="article-carte-image"></div>'}
+            <div class="article-carte-corps">
+              <div class="article-tags">
+                ${(a.tags || []).map(t => `<span class="article-tag">${t}</span>`).join('')}
+              </div>
+              <h3><a href="${a.slug}.html">${a.title}</a></h3>
+              <div class="article-date">${new Date(a.date).toLocaleDateString('fr-FR', {day:'numeric', month:'long', year:'numeric'})}</div>
+              <p class="article-resume">${a.summary}</p>
+              <a href="${a.slug}.html" class="btn btn-secondaire">Lire l'article</a>
+            </div>
+          </article>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('articles-liste').innerHTML =
+          '<div id="blog-vide">Les premiers articles arrivent bientôt…</div>';
+      });
+  </script>
+</body>
+</html>

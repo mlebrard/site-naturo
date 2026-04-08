@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accompagnement naturopathique de la périménopause et ménopause — Marie-Laure Ebrard</title>
+  <meta name="description" content="Naturopathie et ménopause à Cestas (33) et en visio. Accompagnement naturel des bouffées de chaleur, troubles du sommeil, prise de poids, anxiété liés à la périménopause et ménopause.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .symptomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .symptome-item {
+      background: var(--blanc-casse);
+      border: 1px solid var(--bordure);
+      border-radius: var(--rayon);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--texte-principal);
+    }
+    .symptome-icone { font-size: 1.4rem; flex-shrink: 0; }
+    .etapes { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+    .etape {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .etape-num {
+      width: 56px; height: 56px;
+      background-color: var(--vert-sauge);
+      color: var(--blanc-casse);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-titre);
+      font-size: 1.3rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .etape-contenu h3 { margin-bottom: 0.35rem; font-size: 1.1rem; }
+    .etape-contenu p { font-size: 0.9rem; color: var(--texte-secondaire); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-nom">Marie-Laure Ebrard</span>
+        <span class="logo-titre">Naturopathe · Cestas (33)</span>
+      </a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="menopause.html">Périménopause</a>
+        <a href="naturopathie.html">La naturopathie</a>
+        <a href="consultations.html">Consultations</a>
+        <a href="allaitement.html">Allaitement</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html" class="nav-rdv">Prendre RDV</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-contenu">
+      <span class="hero-badge">Spécialisation principale</span>
+      <h1>Périménopause &amp; Ménopause</h1>
+      <p class="lead">Une transition, pas une maladie. Un accompagnement naturel pour traverser cette période avec plus de confort et de confiance en vous.</p>
+    </div>
+  </div>
+
+  <!-- ===== INTRO ===== -->
+  <section class="bg-blanc">
+    <div class="container">
+      <div class="portrait-grid">
+        <div class="portrait-texte">
+          <h2>La périménopause : une transition qui mérite d'être accompagnée</h2>
+          <div class="divider divider-left" style="margin-bottom: 1.5rem;"></div>
+          <p>La périménopause commence souvent entre 45 et 52 ans, bien avant les dernières règles. C'est une période de fluctuations hormonales intenses — les œstrogènes et la progestérone se dérèglent progressivement — qui peut durer plusieurs années et bouleverser le quotidien.</p>
+          <p>Beaucoup de femmes traversent cette période sans en comprendre les mécanismes, parfois sans savoir que leurs symptômes sont liés aux hormones. Fatigue inexpliquée, sommeil perturbé, humeur en dents de scie, prise de poids malgré une alimentation inchangée…</p>
+          <p>La naturopathie ne remplace pas votre médecin ou gynécologue — elle travaille à leurs côtés. Mon rôle est de vous aider à mieux comprendre ce que votre corps traverse, et de vous proposer des outils concrets et naturels pour l'accompagner.</p>
+          <div class="note-deonto">La naturopathie intervient en complément de votre suivi médical. Aucun traitement médical ne doit être interrompu sans l'avis de votre médecin.</div>
+        </div>
+        <div class="portrait-image-wrap">
+          <img src="assets/images/naturopathie.jpg" alt="Accompagnement naturopathique de la ménopause" class="portrait-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYMPTÔMES ===== -->
+  <section class="bg-beige">
+    <div class="container">
+      <div class="section-titre">
+        <h2>Les symptômes que j'accompagne</h2>
+        <p>Chaque femme vit sa ménopause différemment. Voici les difficultés les plus fréquentes sur lesquelles la naturopathie peut apporter un soutien.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="symptomes-grid">
+        <div class="symptome-item">
+          <span class="symptome-icone">🌡️</span>
+          <span>Bouffées de chaleur et sueurs nocturnes</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">🌙</span>
+          <span>Troubles du sommeil</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">⚖️</span>
+          <span>Prise de poids et changement de silhouette</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">💭</span>
+          <span>Anxiété, irritabilité, sautes d'humeur</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">😴</span>
+          <span>Fatigue persistante</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">🦴</span>
+          <span>Douleurs articulaires</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">🧠</span>
+          <span>Brouillard mental, difficultés de concentration</span>
+        </div>
+        <div class="symptome-item">
+          <span class="symptome-icone">💆</span>
+          <span>Stress et gestion émotionnelle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CE QUE J'APPORTE ===== -->
+  <section class="bg-blanc">
+    <div class="container">
+      <div class="section-titre">
+        <h2>Ce que la naturopathie peut vous apporter</h2>
+        <p>Un accompagnement sur quatre leviers principaux, adaptés à votre situation personnelle.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="approche-grid">
+        <div class="approche-item">
+          <span class="approche-icone">🥗</span>
+          <h3>Alimentation adaptée</h3>
+          <p>Les besoins nutritionnels changent avec les hormones. Phyto-œstrogènes, calcium, magnésium, oméga-3… Nous adaptons votre alimentation à cette nouvelle étape, sans vous priver.</p>
+        </div>
+        <div class="approche-item">
+          <span class="approche-icone">🌿</span>
+          <h3>Plantes et compléments</h3>
+          <p>Sauge officinale, trèfle rouge, actée à grappes noires, valériane… Utilisées avec discernement, certaines plantes soutiennent efficacement les symptômes ménopausiques.</p>
+        </div>
+        <div class="approche-item">
+          <span class="approche-icone">🏃‍♀️</span>
+          <h3>Hygiène de vie</h3>
+          <p>Activité physique adaptée pour préserver la masse osseuse et musculaire, gestion du stress, rythme veille-sommeil : les bases qui font vraiment la différence.</p>
+        </div>
+        <div class="approche-item">
+          <span class="approche-icone">🧘‍♀️</span>
+          <h3>Équilibre émotionnel</h3>
+          <p>La ménopause est aussi une période de redéfinition de soi. Mon parcours en RH m'aide à accompagner les femmes dans cette double transition : corps et vie professionnelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DÉROULÉ ===== -->
+  <section class="bg-beige">
+    <div class="container" style="max-width: 760px;">
+      <div class="section-titre">
+        <h2>Comment se déroule l'accompagnement ?</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="etapes">
+        <div class="etape">
+          <div class="etape-num">1</div>
+          <div class="etape-contenu">
+            <h3>Appel découverte (gratuit · 15 min)</h3>
+            <p>Nous faisons connaissance. Vous me parlez de votre situation, de ce que vous traversez. Je vous explique mon approche. Sans engagement.</p>
+          </div>
+        </div>
+        <div class="etape">
+          <div class="etape-num">2</div>
+          <div class="etape-contenu">
+            <h3>Première consultation (1h30 · 75€)</h3>
+            <p>Bilan complet : antécédents, symptômes, alimentation, sommeil, stress, mode de vie. À la suite, vous recevez par mail un programme personnalisé écrit.</p>
+          </div>
+        </div>
+        <div class="etape">
+          <div class="etape-num">3</div>
+          <div class="etape-contenu">
+            <h3>Consultations de suivi (45 min · 50€)</h3>
+            <p>On fait le bilan des mises en œuvre, on ajuste le programme selon vos retours. Le rythme est adapté à chaque personne (généralement toutes les 4 à 8 semaines).</p>
+          </div>
+        </div>
+        <div class="etape">
+          <div class="etape-num">4</div>
+          <div class="etape-contenu">
+            <h3>Suivi à long terme</h3>
+            <p>La ménopause est une transition qui dure. Je reste disponible pour vous accompagner à chaque étape, en ajustant les recommandations selon l'évolution de votre situation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="note-deonto" style="margin-top: 2rem;">
+        Les consultations se déroulent en cabinet à Cestas (33) ou en visioconférence, partout en France. Certaines mutuelles remboursent partiellement les consultations de naturopathie — renseignez-vous auprès de la vôtre.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANDEAU RDV ===== -->
+  <div class="bandeau-rdv">
+    <div class="container" style="text-align: center;">
+      <h2>Commençons par en parler</h2>
+      <p>Un appel découverte gratuit de 15 minutes, sans engagement. Pour voir si mon accompagnement peut vous aider.</p>
+      <div class="bandeau-actions">
+        <a href="contact.html" class="btn btn-primaire">Réserver mon appel découverte</a>
+        <a href="consultations.html" class="btn btn-blanc">Voir tous les tarifs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-nom">Marie-Laure Ebrard</div>
+        <p class="footer-desc">Naturopathe diplômée Euronature/FENA (1200h), spécialisée dans l'accompagnement de la périménopause et ménopause. Cabinet à Cestas (33) · Visio France entière.</p>
+        <div class="footer-contact">
+          <a href="tel:+33681601035">📞 06 81 60 10 35</a>
+          <a href="mailto:mlebrard@sbe33.fr">✉ mlebrard@sbe33.fr</a>
+          <a href="https://maps.google.com/?q=4+allée+des+Chardonnerets+33610+Cestas" target="_blank" rel="noopener">📍 4 allée des Chardonnerets, 33610 Cestas</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-titre">Navigation</div>
+        <ul class="footer-liens">
+          <li><a href="menopause.html">Périménopause &amp; Ménopause</a></li>
+          <li><a href="naturopathie.html">La naturopathie</a></li>
+          <li><a href="consultations.html">Consultations &amp; Tarifs</a></li>
+          <li><a href="allaitement.html">Ateliers allaitement</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contact.html">Contact &amp; RDV</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titre">Infos pratiques</div>
+        <ul class="footer-liens">
+          <li><a href="consultations.html">Tarifs des consultations</a></li>
+          <li><a href="contact.html">Prise de rendez-vous</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© 2026 Marie-Laure Ebrard · Naturopathe à Cestas (33)</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
