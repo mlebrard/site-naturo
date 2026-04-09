@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260409b">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260409c">
   <style>
     .contact-grid {
       display: grid;
@@ -196,13 +196,37 @@
     </div>
   </section>
 
-  <!-- PHOTO CABINET -->
-  <section class="bg-blanc" style="padding: 0;">
-    <div style="max-height: 420px; overflow: hidden;">
-      <img src="assets/images/bureau-cestas.png" alt="Cabinet de naturopathie Marie-Laure Ebrard — 4 allée des Chardonnerets, Cestas" style="width: 100%; object-fit: cover; object-position: center 30%; max-height: 420px; display: block;">
-    </div>
-    <div class="container" style="padding-top: 1rem; padding-bottom: 1rem; text-align: center;">
-      <p style="font-size: 0.875rem; color: var(--texte-secondaire); margin: 0;">Cabinet à Cestas — 4 allée des Chardonnerets, 33610</p>
+  <!-- PHOTO CABINET + DIPLÔMES -->
+  <section class="bg-beige" style="padding: 4rem 1.5rem;">
+    <div class="container">
+
+      <!-- Photo bureau -->
+      <div style="border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre-forte); margin-bottom: 3.5rem; max-height: 400px;">
+        <img src="assets/images/bureau-cestas2.png"
+             alt="Cabinet de naturopathie Marie-Laure Ebrard à Cestas — vue sur jardin"
+             style="width: 100%; height: 400px; object-fit: cover; object-position: center 15%; display: block;">
+      </div>
+
+      <!-- Diplômes -->
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="margin-bottom: 0.5rem;">Formations &amp; certifications</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 860px; margin: 0 auto;">
+        <div style="background: var(--blanc-casse); border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre); padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <img src="assets/images/diplome-naturopathe.png"
+               alt="Diplôme privé de Naturopathe — Euronature/FENA — Marie-Laure Ebrard"
+               style="width: 100%; border-radius: 2px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+          <p style="font-size: 0.85rem; color: var(--texte-secondaire); text-align: center; margin: 0;">Diplôme privé de Naturopathe · Euronature/FENA · 1200h · Promotion 2022</p>
+        </div>
+        <div style="background: var(--blanc-casse); border-radius: var(--rayon); overflow: hidden; box-shadow: var(--ombre); padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <img src="assets/images/diplome-allaitement.png"
+               alt="Attestation Facilitatrice Allaitement EDBN — École du Bien Naître — Marie-Laure Ebrard"
+               style="width: 100%; border-radius: 2px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+          <p style="font-size: 0.85rem; color: var(--texte-secondaire); text-align: center; margin: 0;">Facilitatrice Allaitement EDBN© · École du Bien Naître · 28h</p>
+        </div>
+      </div>
     </div>
   </section>
 
