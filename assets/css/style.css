@@ -277,6 +277,20 @@ section { padding: var(--padding-section); }
 .bg-vert  { background-color: var(--vert-fonce); color: var(--blanc-casse); }
 .bg-vert h2, .bg-vert h3, .bg-vert p { color: var(--blanc-casse); }
 
+/* Texte forcé en clair sur toutes les zones à fond vert foncé */
+.hero-contenu p,
+.hero-contenu h1,
+.page-hero p,
+.page-hero h1,
+.page-hero h2,
+.bandeau-rdv p,
+.bandeau-rdv h2,
+.site-footer p,
+.site-footer h2,
+.site-footer h3 {
+  color: rgba(254,252,248,0.88);
+}
+
 /* ---- Cartes spécialisations ---- */
 .cartes-grid {
   display: grid;
@@ -498,7 +512,7 @@ section { padding: var(--padding-section); }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--vert-sauge);
+  color: rgba(254,252,248,0.6);
   margin-bottom: 1rem;
 }
 .footer-liens { display: flex; flex-direction: column; gap: 0.5rem; }
