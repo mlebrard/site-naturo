@@ -1,0 +1,20 @@
+# Environnement local
+.env
+.env.*
+
+# Dossiers sensibles / outils de développement
+docs/
+.claude/
+.playwright-mcp/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

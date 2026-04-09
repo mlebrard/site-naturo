@@ -119,18 +119,77 @@
     </div>
   </section>
 
-  <!-- CAL.COM PLEINE LARGEUR -->
+  <!-- TYPES DE RENDEZ-VOUS -->
   <section class="bg-blanc">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 2rem;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
         <h2>Prendre rendez-vous</h2>
-        <p style="color: var(--texte-secondaire); margin-top: 0.5rem;">Choisissez votre type de consultation et réservez votre créneau directement.</p>
+        <p style="color: var(--texte-secondaire); margin-top: 0.5rem;">Choisissez votre type de consultation et réservez directement en ligne.</p>
         <div class="divider"></div>
       </div>
 
-      <div id="cal-inline" style="width: 100%; min-height: 600px; border-radius: var(--rayon); overflow: hidden;"></div>
+      <!-- Appel découverte -->
+      <div class="tarif-carte mise-en-avant" style="max-width: 520px; margin: 0 auto 3rem; text-align: center;">
+        <span class="tarif-badge">Gratuit &middot; Sans engagement</span>
+        <h3 style="font-size: 1.4rem; margin: 0.75rem 0 0.4rem;">Appel découverte</h3>
+        <div class="tarif-duree">15 minutes &middot; Visio ou téléphone</div>
+        <p style="color: var(--texte-secondaire); margin: 0.75rem 0 1.5rem; font-size: 0.95rem;">Un premier échange pour faire connaissance, comprendre votre situation et voir si mon accompagnement vous correspond.</p>
+        <button type="button" data-cal-link="mlebrard/decouverte-naturo" data-cal-origin="https://cal.eu" class="btn btn-primaire" style="width: 100%; border: none; font-family: inherit; font-size: inherit; cursor: pointer;">
+          Réserver mon appel découverte
+        </button>
+      </div>
 
-      <div style="text-align: center; margin-top: 1.5rem; color: var(--texte-secondaire); font-size: 0.9rem;">
+      <!-- Naturopathie adulte -->
+      <h3 style="color: var(--texte-secondaire); font-size: 0.9rem; font-family: var(--font-corps); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">Naturopathie adulte</h3>
+      <div class="tarifs-grid" style="margin-bottom: 3rem;">
+        <div class="tarif-carte mise-en-avant">
+          <span class="tarif-badge">Adulte</span>
+          <h3>Première consultation</h3>
+          <div class="tarif-duree">Durée : 1h30</div>
+          <div class="tarif-prix">75 € <span>/ séance</span></div>
+          <p class="tarif-description">Bilan complet, anamnèse, programme personnalisé envoyé par mail.</p>
+          <button type="button" data-cal-link="mlebrard/consultation-naturo-adulte" data-cal-origin="https://cal.eu" class="btn btn-secondaire" style="width: 100%; border: none; font-family: inherit; font-size: inherit; cursor: pointer; margin-top: 1rem;">
+            Réserver ce rendez-vous
+          </button>
+        </div>
+        <div class="tarif-carte">
+          <span class="tarif-badge">Adulte</span>
+          <h3>Consultation de suivi</h3>
+          <div class="tarif-duree">Durée : 45 min</div>
+          <div class="tarif-prix">50 € <span>/ séance</span></div>
+          <p class="tarif-description">Bilan des actions mises en œuvre, ajustements du programme.</p>
+          <button type="button" data-cal-link="mlebrard/suivi-naturo" data-cal-origin="https://cal.eu" class="btn btn-secondaire" style="width: 100%; border: none; font-family: inherit; font-size: inherit; cursor: pointer; margin-top: 1rem;">
+            Réserver ce rendez-vous
+          </button>
+        </div>
+      </div>
+
+      <!-- Naturopathie enfant -->
+      <h3 style="color: var(--texte-secondaire); font-size: 0.9rem; font-family: var(--font-corps); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">Naturopathie enfant</h3>
+      <div class="tarifs-grid" style="margin-bottom: 2rem;">
+        <div class="tarif-carte">
+          <span class="tarif-badge">Enfant</span>
+          <h3>Première consultation</h3>
+          <div class="tarif-duree">Durée : 1h</div>
+          <div class="tarif-prix">60 € <span>/ séance</span></div>
+          <p class="tarif-description">Bilan adapté à l'enfant, programme personnalisé.</p>
+          <button type="button" data-cal-link="mlebrard/consultation-naturo-enfant" data-cal-origin="https://cal.eu" class="btn btn-secondaire" style="width: 100%; border: none; font-family: inherit; font-size: inherit; cursor: pointer; margin-top: 1rem;">
+            Réserver ce rendez-vous
+          </button>
+        </div>
+        <div class="tarif-carte">
+          <span class="tarif-badge">Enfant</span>
+          <h3>Consultation de suivi</h3>
+          <div class="tarif-duree">Durée : 30 min</div>
+          <div class="tarif-prix">40 € <span>/ séance</span></div>
+          <p class="tarif-description">Suivi et ajustements.</p>
+          <button type="button" data-cal-link="mlebrard/suivi-naturo-enfant" data-cal-origin="https://cal.eu" class="btn btn-secondaire" style="width: 100%; border: none; font-family: inherit; font-size: inherit; cursor: pointer; margin-top: 1rem;">
+            Réserver ce rendez-vous
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 0.5rem; color: var(--texte-secondaire); font-size: 0.9rem;">
         Vous préférez téléphoner ?&nbsp;
         <a href="tel:+33681601035" style="color: var(--vert-fonce); font-weight: 600;">06 81 60 10 35</a>
       </div>
@@ -192,7 +251,7 @@
 
   <script src="assets/js/main.js"></script>
 
-  <!-- Cal.com embed -->
+  <!-- Cal.eu popup embed -->
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
@@ -219,15 +278,9 @@
     })(window, "https://app.cal.eu/embed/embed.js", "init");
 
     Cal("init", { origin: "https://cal.eu" });
-    Cal("inline", {
-      elementOrSelector: "#cal-inline",
-      calLink: "mlebrard",
-      layout: "month_view"
-    });
     Cal("ui", {
       styles: { branding: { brandColor: "#7A9E7E" } },
-      hideEventTypeDetails: false,
-      layout: "month_view"
+      hideEventTypeDetails: false
     });
   </script>
 </body>
