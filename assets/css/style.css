@@ -53,8 +53,21 @@ h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
 h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
 h4 { font-size: 1.1rem; }
 
-p { margin-bottom: 1rem; color: var(--texte-principal); }
+p { margin-bottom: 1rem; color: var(--texte-principal); text-align: justify; }
 p:last-child { margin-bottom: 0; }
+
+/* Zones où la justification ne s'applique pas */
+.section-titre p,
+.bandeau-rdv p { text-align: center; }
+
+.approche-item p,
+.carte-corps p,
+.lead,
+.tarif-description,
+.article-date,
+.article-resume,
+.footer-desc,
+.hero-localisation { text-align: left; }
 
 .lead {
   font-size: 1.125rem;
@@ -541,7 +554,7 @@ section { padding: var(--padding-section); }
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .portrait-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .portrait-image-wrap { max-width: 420px; }
+  .portrait-image-wrap { max-width: 420px; margin: 0 auto; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
