@@ -10,5 +10,29 @@
     "description": "Saule pleureur en pleine floraison avec pollen printanier, fond ciel bleu",
     "license": "Unsplash License (free commercial use)",
     "used_in": ["blog/allergies-printemps-naturopathie"]
+  },
+  {
+    "file": "sage-menopause_rpE1rGYOYRs.jpg",
+    "category": "site",
+    "keyword": "sage herb wellness calm natural menopause",
+    "unsplash_id": "rpE1rGYOYRs",
+    "author": "Manuel Fleig",
+    "author_url": "https://unsplash.com/@j9pDKT4MrL4",
+    "unsplash_url": "https://unsplash.com/photos/a-close-up-of-some-leaves-rpE1rGYOYRs",
+    "description": "Bouquet de sauge officinale — plante phare de l'accompagnement ménopause",
+    "license": "Unsplash License (free commercial use)",
+    "used_in": ["index.html (carte ménopause)"]
+  },
+  {
+    "file": "woman-hilltop-serene_BiUioL7G4yc.jpg",
+    "category": "site",
+    "keyword": "woman serene nature wellness calm hilltop",
+    "unsplash_id": "BiUioL7G4yc",
+    "author": "Cristina Gottardi",
+    "author_url": "https://unsplash.com/@cristina_gottardi",
+    "unsplash_url": "https://unsplash.com/photos/womens-white-tank-top-on-top-of-the-hill-BiUioL7G4yc",
+    "description": "Femme de dos au sommet d'une colline, vue panoramique — sérénité et liberté",
+    "license": "Unsplash License (free commercial use)",
+    "used_in": ["menopause.html (image portrait section intro)"]
   }
 ]
